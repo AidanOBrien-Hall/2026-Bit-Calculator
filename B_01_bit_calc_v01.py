@@ -39,6 +39,24 @@ def get_filetype():
         # check for text
         elif response in ["text", 'txt', 't']:
             return "text"
+        #funny haha
+        elif response in ["no"]:
+            print("Meanie >:(")
+
+        elif response in ["yes"]:
+            print("are you sure you understand the question?")
+
+        elif response in ["chair",  "hi", "hello", ":)"]:
+            print("your heart is in the right place buddy.")
+
+        elif response in [".zip", ".jpeg", ".png"]:
+            print("wrong kind of file type buddy")
+
+        elif response in ["file type"]:
+            print("Yeah, that's what i said.")
+
+        elif response in ["maybe"]:
+            print("what")
 
         # if the response is invalid output an error
         else:
@@ -103,6 +121,9 @@ def calc_text_bits():
     # Get text from user
     response = input("Enter some text: ")
 
+    if response == "no":
+        print("\n that's mean :(")
+
     # Calculate bits needed
     num_chars = len(response)
     num_bits = num_chars * 8
@@ -129,6 +150,7 @@ while True:
 
     if file_type == "xxx":
         break
+
 
 
     # if user chose 'i', ask if they want an image / integer
